@@ -1,0 +1,8 @@
+---
+R1:
+  hostname: "sbx-iosxr-mgmt.cisco.com"
+  username: "admin"
+  password: "C1sco12345"
+  port: 10000
+  groups:
+    - cisco_group
