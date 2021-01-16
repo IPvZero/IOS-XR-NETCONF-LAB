@@ -25,7 +25,6 @@ To change the configurations simply enter the ```host_vars``` directory and modi
 
 To execute the script:
 ```python3 xr-demo.py```
-
 &nbsp;
 &nbsp;
 
@@ -34,12 +33,8 @@ To manually log into the XR Always-On Sandbox and run show commands for verifica
 
 Then enter the password: 
 ```C1sco12345```
-
-
-
-
-
-
+&nbsp;
+&nbsp;
 
 You can also retrieve the configuration information directly over NETCONF using the scripts in this repo.
 
