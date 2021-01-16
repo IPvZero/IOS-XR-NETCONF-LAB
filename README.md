@@ -23,7 +23,7 @@ Pip install the dependencies and git clone the repository. Change into the ```IO
 
 To change the configurations simply enter the ```host_vars``` directory and modify the values in the ```R1.yaml``` file.
 
-To execute the script:
+#### To execute the script:
 ```python3 xr-demo.py```
 
 &nbsp;
@@ -31,13 +31,17 @@ To execute the script:
 &nbsp;
 
 
-To manually log into the XR Always-On Sandbox and run show commands for verification:
+#### To manually log into the XR Always-On Sandbox and run show commands for verification:
 ```ssh admin@sbx-iosxr-mgmt.cisco.com -p 8181```
 
 Then enter the password: 
 ```C1sco12345```
 
 You can also retrieve the configuration information directly over NETCONF using the scripts in this repo.
+
+&nbsp;
+&nbsp;
+&nbsp;
 
 To retrieve Access Control List configuration information:
 ```python3 get-acl.py```
@@ -51,7 +55,8 @@ To retrieve OSPF configuration information:
 To retrieve NTP configuration information:
 ```python3 get-ntp.py```
 
-
+&nbsp;
+&nbsp;
 
 
 ### About Me
