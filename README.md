@@ -16,7 +16,7 @@ pip3 install nornir-jinja2
 
 ### WARNING
 This lab uses a shared resource. If others are using it at the same to you might experience errors (lock denied...) and failures due to timeouts.
-When this happens, you may have to wait til the resource if freed up.
+When this happens you will need to wait until the resource is freed up.
 
 ### LAB INSTRUCTIONS
 To change the the configurations simply enter the host_vars directory and modify the values in the R1.yaml file.
