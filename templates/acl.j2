@@ -1,0 +1,57 @@
+  <config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <ipv4-acl-and-prefix-list xc:operation="replace" xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-acl-cfg">
+      <accesses>
+        {% for acl in host.facts.ACLs %}
+        <access>
+          <access-list-name>{{ acl.acl_name }}</access-list-name>
+          <access-list-entries>
+              {% if "remarks" in acl %}
+              {% set remarks = acl.remarks %}
+              {% for remark in remarks %}
+              <access-list-entry>
+              <sequence-number>{{ remark.sequence }}</sequence-number>
+              <remark>{{ remark.statement }}</remark>
+              <sequence-str>{{ remark.sequence }}</sequence-str>
+             </access-list-entry>
+              {% endfor %}
+              {% endif %}
+              {% if "rules" in acl %}
+              {% set rules = acl.rules %}
+              {% for rule in rules %}
+              <access-list-entry>
+              <sequence-number>{{ rule.sequence }}</sequence-number>
+              <grant>{{ rule.grant }}</grant>
+              <protocol>{{ rule.protocol }}</protocol>
+              {% if rule.source_address is defined %}
+              <source-network>
+                <source-address>{{ rule.source_address }}</source-address>
+                <source-wild-card-bits>{{ rule.source_wildcard }}</source-wild-card-bits>
+              </source-network>
+              {% endif %}
+              {% if rule.destination_address is defined %}
+              <destination-network>
+                <destination-address>{{ rule.destination_address }}</destination-address>
+                <destination-wild-card-bits>{{ rule.destination_wildcard }}</destination-wild-card-bits>
+              </destination-network>
+              {% endif %}
+              {% if rule.source_port is defined %}
+              <source-port>
+                <source-operator>{{ rule.source_operator }}</source-operator>
+                <first-source-port>{{ rule.source_port }}</first-source-port>
+              </source-port>
+              {% endif %}
+              {% if rule.destination_port is defined %}
+              <destination-port>
+                <destination-operator>{{ rule.destination_operator }}</destination-operator>
+                <first-destination-port>{{ rule.destination_port }}</first-destination-port>
+              </destination-port>
+              {% endif %}
+               </access-list-entry>
+           {% endfor %}
+          {% endif %}
+          </access-list-entries>
+        </access>
+      {% endfor %}
+      </accesses>
+    </ipv4-acl-and-prefix-list>
+  </config>
