@@ -4,7 +4,7 @@ date: "15th Jan 2021"
 tags: ["nornir", "scrapli", "netconf"]
 ---
 
-# IOS-XR-NETCONF-LAB
+# IOS-XR NETCONF LAB
 This lab uses NETCONF to configure the IOS-XR Always On Sandbox.
 
 ## Dependencies
