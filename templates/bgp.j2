@@ -1,0 +1,70 @@
+<config
+        xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+        <bgp xc:operation="replace"
+                xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-bgp-cfg">
+                <instance>
+                        <instance-name>default</instance-name>
+                        <instance-as>
+                                <as>0</as>
+                                <four-byte-as>
+                                        <as>{{ host.facts.bgp.autonomous_system }}</as>
+                                        <bgp-running/>
+                                        <default-vrf>
+                                                <global>
+                                                        <router-id>{{ host.facts.bgp.bgp_rid }}</router-id>
+                                                        <global-afs>
+                                                                <global-af>
+                                                                        <af-name>ipv4-unicast</af-name>
+                                                                        <enable/>
+                    {% if "networks" in host.facts.bgp %}
+                                                                        <sourced-networks>
+                    {% for n in host.facts.bgp.networks %}
+
+                                                                                <sourced-network>
+                                                                                        <network-addr>{{ n.network }}</network-addr>
+                                                                                        <network-prefix>{{ n.prefix }}</network-prefix>
+                                                                                </sourced-network>
+                      {% endfor %}
+
+                                                                        </sourced-networks>
+                     {% endif %}
+                                                                </global-af>
+                                                        </global-afs>
+                                                </global>
+                                                <bgp-entity>
+                                                        <neighbors>
+                 {% set neighbors = host.facts.bgp.neighbors %}
+                 {% for neighbor in neighbors %}
+                 {% if "keepalive" in neighbor %}
+
+                                                                <neighbor>
+                                                                        <neighbor-address>{{ neighbor["neighbor"] }}</neighbor-address>
+                                                                        <remote-as>
+                                                                                <as-xx>0</as-xx>
+                                                                                <as-yy>{{ neighbor["remote_as"] }}</as-yy>
+                                                                        </remote-as>
+                                                                        <timers>
+                                                                                <keepalive-interval>{{ neighbor["keepalive"] }}</keepalive-interval>
+                                                                                <hold-time>{{ neighbor["hold-time"] }}</hold-time>
+                                                                        </timers>
+                                                                </neighbor>
+                 {% else %}
+
+                                                                <neighbor>
+                                                                        <neighbor-address>{{ neighbor["neighbor"] }}</neighbor-address>
+                                                                        <remote-as>
+                                                                                <as-xx>0</as-xx>
+                                                                                <as-yy>{{ neighbor["remote_as"] }}</as-yy>
+                                                                        </remote-as>
+                                                                </neighbor>
+                 {% endif %}
+                 {% endfor %}
+
+                                                        </neighbors>
+                                                </bgp-entity>
+                                        </default-vrf>
+                                </four-byte-as>
+                        </instance-as>
+                </instance>
+        </bgp>
+</config>
