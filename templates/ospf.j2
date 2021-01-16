@@ -1,0 +1,37 @@
+<config
+        xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+        <ospf xc:operation="replace"
+                xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-ospf-cfg">
+                <processes>
+                        <process>
+                                <process-name>{{ host.facts.ospf.process_id }}</process-name>
+                                <default-vrf>
+                                        <router-id>{{ host.facts.ospf.router_id }}</router-id>
+                                        <area-addresses>
+             {% set areas = host.facts.ospf.areas %}
+             {% for area in areas %}
+
+                                                <area-area-id>
+                                                        <area-id>{{ area["area"] }}</area-id>
+                                                        <running/>
+                                                        <name-scopes>
+                {% set interfaces = area["interfaces"] %}
+                {% for intf in interfaces %}
+
+                                                                <name-scope>
+                                                                        <interface-name>{{ intf }}</interface-name>
+                                                                        <running/>
+                                                                </name-scope>
+                 {% endfor %}
+
+                                                        </name-scopes>
+                                                </area-area-id>
+              {% endfor %}
+
+                                        </area-addresses>
+                                </default-vrf>
+                                <start/>
+                        </process>
+                </processes>
+        </ospf>
+</config>
