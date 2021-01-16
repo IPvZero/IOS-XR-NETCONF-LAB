@@ -27,9 +27,6 @@ To change the configurations simply enter the ```host_vars``` directory and modi
 ```python3 xr-demo.py```
 
 &nbsp;
-&nbsp;
-&nbsp;
-
 
 #### To manually log into the XR Always-On Sandbox and run show commands for verification:
 ```ssh admin@sbx-iosxr-mgmt.cisco.com -p 8181```
@@ -37,22 +34,20 @@ To change the configurations simply enter the ```host_vars``` directory and modi
 Then enter the password: 
 ```C1sco12345```
 
-You can also retrieve the configuration information directly over NETCONF using the scripts in this repo.
-
-&nbsp;
-&nbsp;
 &nbsp;
 
-To retrieve Access Control List configuration information:
+#### You can also retrieve the configuration information directly over NETCONF using the scripts in this repo.
+
+##### To retrieve Access Control List configuration information:
 ```python3 get-acl.py```
 
-To retrieve BGP configurarion information:
+##### To retrieve BGP configurarion information:
 ```python3 get-bgp.py```
 
-To retrieve OSPF configuration information:
+##### To retrieve OSPF configuration information:
 ```python3 get-ospf.py```
 
-To retrieve NTP configuration information:
+##### To retrieve NTP configuration information:
 ```python3 get-ntp.py```
 
 &nbsp;
