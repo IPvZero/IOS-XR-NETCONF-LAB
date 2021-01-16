@@ -3,10 +3,9 @@
 inventory:
     plugin: SimpleInventory
     options:
-            #CHANGE THESE PATHS TO MATCH YOUR OWN
-        host_file: "/home/ipvzero/Nornir/hosts.yaml"
-        group_file: "/home/ipvzero/Nornir/groups.yaml"
-        defaults_file: "/home/ipvzero/Nornir/defaults.yaml"
+        host_file: "hosts.yaml"
+        group_file: "groups.yaml"
+        defaults_file: "defaults.yaml"
 
 runners:
     plugin: threaded
