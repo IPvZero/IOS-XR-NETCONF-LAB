@@ -20,7 +20,6 @@ This lab uses a shared resource. If others are using it at the same to you might
 First change the file paths in the config.yaml file to match your own environment.
 After that you can run the script (feel free to change the values in the R1.yaml and modify the configurations)!
 To execute the script:
-
 ```python3 xr-demo.py```
 
 To manually log into the XR Always-On Sandbox and run show commands for verification:
