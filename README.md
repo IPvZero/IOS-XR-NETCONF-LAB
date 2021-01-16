@@ -29,8 +29,12 @@ To execute the script:
 
 
 To manually log into the XR Always-On Sandbox and run show commands for verification:
+
 ```ssh admin@sbx-iosxr-mgmt.cisco.com -p 8181```
-Then enter the password: ```C1sco12345```
+
+Then enter the password: 
+
+```C1sco12345```
 
 
 
