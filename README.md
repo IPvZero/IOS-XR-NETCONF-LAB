@@ -16,6 +16,7 @@ pip3 install nornir-jinja2
 
 ### WARNING
 This lab uses a shared resource. If others are using it at the same you may experience errors (lock denied...) and failures due to timeouts.
+
 When this happens you will need to wait until the resource is freed up before trying again.
 
 ### LAB INSTRUCTIONS
