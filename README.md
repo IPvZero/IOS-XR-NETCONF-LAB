@@ -26,7 +26,8 @@ To change the configurations simply enter the ```host_vars``` directory and modi
 To execute the script:
 ```python3 xr-demo.py```
 
-
+&nbsp;
+&nbsp;
 
 To manually log into the XR Always-On Sandbox and run show commands for verification:
 ```ssh admin@sbx-iosxr-mgmt.cisco.com -p 8181```
