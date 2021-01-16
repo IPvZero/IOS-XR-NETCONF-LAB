@@ -13,31 +13,26 @@ This lab uses NETCONF to configure the IOS-XR Always On Sandbox.
 pip3 install nornir-scrapli
 ```
 
-###WARNING
+### WARNING
 This lab uses a shared resource. If others are using it at the same to you might experience errors/timeouts.
 
-###LAB INSTRUCTIONS
+### LAB INSTRUCTIONS
 First change the file paths in the config.yaml file to match your own environment.
 After that you can run the script (feel free to change the values in the R1.yaml and modify the configurations)!
 To execute the script:
 
 ```python3 xr-demo.py```
 
-
-
 To manually log into the XR Always-On Sandbox and run show commands for verification:
 ```ssh admin@sbx-iosxr-mgmt.cisco.com -p 8181```
-
 
 You can also retrieve the configuration information directly over NETCONF using the scripts in this repo.
 
 To retrieve Access Control List configuration information:
 ```python3 get-acl.py```
 
-
 To retrieve BGP configurarion information:
 ```python3 get-bgp.py```
-
 
 To retrieve OSPF configuration information:
 ```python3 get-ospf.py```
