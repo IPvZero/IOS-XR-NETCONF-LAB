@@ -27,14 +27,12 @@ To execute the script:
 ```python3 xr-demo.py```
 &nbsp;
 &nbsp;
-
+&nbsp;
 To manually log into the XR Always-On Sandbox and run show commands for verification:
 ```ssh admin@sbx-iosxr-mgmt.cisco.com -p 8181```
 
 Then enter the password: 
 ```C1sco12345```
-&nbsp;
-&nbsp;
 
 You can also retrieve the configuration information directly over NETCONF using the scripts in this repo.
 
