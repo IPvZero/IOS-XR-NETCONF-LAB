@@ -11,7 +11,7 @@ from nornir import InitNornir
 
 nr = InitNornir(config_file="config.yaml")
 
-bgo_filter = """
+bgp_filter = """
 <bgp xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-bgp-cfg">
 </bgp> """
 
