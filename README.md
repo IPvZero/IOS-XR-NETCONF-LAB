@@ -20,7 +20,8 @@ When this happens you will need to wait until the resource is freed up.
 
 ### LAB INSTRUCTIONS
 Pip install the dependencies and git clone the repository. Change into the ```IOS-XR-NETCONF-LAB``` directory.
-To change the the configurations simply enter the ```host_vars``` directory and modify the values in the ```R1.yaml``` file.
+
+To change the configurations simply enter the ```host_vars``` directory and modify the values in the ```R1.yaml``` file.
 
 To execute the script:
 ```python3 xr-demo.py```
