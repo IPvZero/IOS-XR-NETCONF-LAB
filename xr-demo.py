@@ -7,10 +7,12 @@ Be aware this Sandbox is a shared resource and if others are using it at the sam
 you may experience failures/timeouts.
 
 INSTRUCTIONS: This script utilised the Nornir Automation Framework and the Scrapli Netconf library.
-You can install this library with either pip or pip3.
+You can install with either pip or pip3.
 PIP:   python3 -m pip install nornir-scrapli
+       python3 -m pip install nornir-jinja2 
 
 PIP3: pip3 install nornir-scrapli
+      pip3 install nornir-jinja2 
 """
 
 from nornir import InitNornir
