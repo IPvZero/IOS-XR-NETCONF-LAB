@@ -50,9 +50,7 @@ Then enter the password:
 ##### To retrieve NTP configuration information:
 ```python3 get-ntp.py```
 
-&nbsp;
-&nbsp;
-
+-------------------------------------------------
 
 ### About Me
 My name's John McGovern, I maintain a Youtube channel called IPvZero and I am trainer for CBT Nuggets. 
