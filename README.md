@@ -11,6 +11,7 @@ This lab uses NETCONF to configure the IOS-XR Always On Sandbox.
 
 ```
 pip3 install nornir-scrapli
+pip3 install nornir-jinja2 
 ```
 
 ### WARNING
