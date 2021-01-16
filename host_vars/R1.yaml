@@ -94,7 +94,7 @@ ACLs:
         statement: "~~ PERMITS SSH ACCESS FOR 192.168.55.5 -- 34.34.34.0/24 ~~"
 
       - sequence: 30
-        statement: "PERMITS IP TRAFFIC FROM 172.25.10.0/24 -- ANYWHERE"
+        statement: "~~ PERMITS IP TRAFFIC FROM 172.25.10.0/24 -- ANYWHERE ~~"
 
     rules:
       - sequence: 20
