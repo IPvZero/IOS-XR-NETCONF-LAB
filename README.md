@@ -56,6 +56,7 @@ Then enter the password:
 
 ### About Me
 My name's John McGovern, I maintain a Youtube channel called IPvZero and I am trainer for CBT Nuggets. 
+
 I create instructional videos on Python Network Automation.
 
 ### Contact
