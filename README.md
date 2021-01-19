@@ -1,9 +1,3 @@
----
-title: "NETCONF Network Automation"
-date: "15th Jan 2021"
-tags: ["nornir", "scrapli", "netconf"]
----
-
 # IOS-XR NETCONF LAB
 This lab uses NETCONF to configure the IOS-XR Always On Sandbox.
 -------------------------------------------------------------------
@@ -51,6 +45,9 @@ Then enter the password:
 ```python3 get-ntp.py```
 
 -------------------------------------------------
+## Video Walkthrough
+You can find a video walkthrough of this lab on my [youtube](https://www.youtube.com/watch?v=tFN7-jXX2dQ) channel!
+
 
 ### About Me
 My name's John McGovern, I maintain a Youtube channel called IPvZero and I am trainer for CBT Nuggets. 
