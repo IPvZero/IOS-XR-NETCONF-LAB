@@ -48,7 +48,7 @@ Then enter the password:
 ## Video Walkthrough
 You can find a video walkthrough of this lab on my [youtube](https://www.youtube.com/watch?v=tFN7-jXX2dQ) channel!
 
-
+---------------------------------------------
 ### About Me
 My name's John McGovern, I maintain a Youtube channel called IPvZero and I am trainer for CBT Nuggets. 
 
