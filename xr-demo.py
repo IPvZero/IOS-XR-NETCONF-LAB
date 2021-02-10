@@ -8,11 +8,11 @@ you may experience failures/timeouts.
 
 INSTRUCTIONS: This script utilised the Nornir Automation Framework and the Scrapli Netconf library.
 You can install with either pip or pip3.
-PIP:   python3 -m pip install nornir-scrapli
-       python3 -m pip install nornir-jinja2 
+PIP:   python3 -m pip install -r requirements.txt
 
-PIP3: pip3 install nornir-scrapli
-      pip3 install nornir-jinja2 
+
+PIP3: pip3 install -r requirements.txt
+      
 """
 
 from nornir import InitNornir
